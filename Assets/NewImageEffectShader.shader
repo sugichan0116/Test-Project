@@ -53,10 +53,10 @@
 				r %= s;
 				r -= fixed2(s, s) / 2;
 
-				float t = (_Time.y * 10 - R.x*s*3 - R.y) * 0.2;
-
+				float t = (sin(_Time.y) * 30 - R.x*s*3 - R.y) * 0.2;
+				
 				if(abs(abs(r.x) + abs(r.y)) < s * t)
-				col *= 0;
+				col *= 0.5;
 
 				return col;
 			}
